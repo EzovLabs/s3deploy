@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 'awesomeS3uploader'
+awesome = AwesomeS3uploader::Main.new
+awesome.run
