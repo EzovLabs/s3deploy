@@ -10,11 +10,14 @@ module AwesomeS3uploader
       config = YAML.load_file './config.yml'
       @bucket_name = config['bucket_name']
       @project_path = config['path_to_project']
+      @access_key = config['aws_key']
+      @secret_key = config['aws_secret']
+      @region = config['aws_region']
     end
 
     def initialize
       parse_config
-      @deploy = Deploy.new @project_path, @bucket_name
+      @deploy = Deploy.new @project_path, @bucket_name, @access_key, @secret_key, @region
       @git = GitUtils.new @project_path
       @rollback = Rollback.new @git
     end
