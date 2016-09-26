@@ -1,8 +1,8 @@
 require 'git'
 module AwesomeS3uploader
   class GitUtils
-    def initialize(path_to_project)
-      @git = Git.open(path_to_project)
+    def initialize
+      @git = Git.open('.')
     end
 
     def mark_commit
