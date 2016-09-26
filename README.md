@@ -29,14 +29,14 @@ for ubuntu you can run `apt-get install s3cmd`
 ## Usage
 
 create 'config.yml' in root of your project. and fill it as in example
-`
+```yaml
 bucket_name: 'your bucket name'
 aws_key: your aws access key
 aws_secret: your aws secret key
 aws_region: your aws region
 path_to_source: './build' # path to assembled js files
 deploy_path: '/assets/' # where you want to upload
-`
+```
 
 then run `s3deploy deploy` to deploy or `s3deploy rollback` to rollback to any state that have been pushed
 
