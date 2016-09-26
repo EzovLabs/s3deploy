@@ -40,6 +40,8 @@ deploy_path: '/assets/' # where you want to upload
 
 then run `s3deploy deploy` to deploy or `s3deploy rollback` to rollback to any state that have been pushed
 
+also do no use 'deploy' branch name in your git because it reserved by this tool and if you do it can lead to unwanted things
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
