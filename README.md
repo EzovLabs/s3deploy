@@ -20,9 +20,25 @@ Or install it yourself as:
 
     $ gem install awesomeS3uploader
 
+also you need to install `s3cmd`
+
+for arch  you can run `pacman -S s3cmd`
+for ubuntu you can run `apt-get install s3cmd`
+
+
 ## Usage
 
-TODO: Write usage instructions here
+create 'config.yml' in root of your project. and fill it as in example
+`
+bucket_name: 'your bucket name'
+aws_key: your aws access key
+aws_secret: your aws secret key
+aws_region: your aws region
+path_to_source: './build' # path to assembled js files
+deploy_path: '/assets/' # where you want to upload
+`
+
+then run `s3deploy deploy` to deploy or `s3deploy rollback` to rollback to any state that have been pushed
 
 ## Development
 
@@ -38,4 +54,3 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/[USERN
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
